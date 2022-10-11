@@ -1,5 +1,5 @@
 ---
-title: Structure for mobile automation **(Required)**
+title: Structure for mobile automation
 subtitle: Clean and well-organized structure for mobile automation for native apps
 /* The pathname of your article url 
  * Ex. In https://engineering.hashnode.com/how-we-autodetect-spam-using-googles-vertex-ai 
@@ -20,4 +20,4 @@ domain: tandt53.com
 ignorePost: false
 ---
 
-![State-Management](./assets/images/well-structure.png)
+![State-Management](https://cdn.hashnode.com/res/hashnode/image/upload/v1665497700038/ryiIShXgO.png?auto=compress)
