@@ -1,5 +1,5 @@
 ---
-title: "State management in automation test scenario"
+title: State management in automation test scenario
 subtitle: The post will give a hint to manage state efficiently and well-organized 
 tags: general, automation-test, state-management
 domain: tandt53.com
