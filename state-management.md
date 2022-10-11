@@ -6,7 +6,7 @@ ignorePost: false
 ---
 
 Besides well-organized code in a scenario, it is necessary to manage values going through that scenario, especially in End-2-End scenario. Thus, this post will suggest an flow of those values inside an automation test case.
-![State-Management]([/images/auto-test/state-management-overview.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1665497896647/PUTI3h7X30.png?auto=compress))
+![State-Management](https://cdn.hashnode.com/res/hashnode/image/upload/v1665497896647/PUTI3h7X30.png?auto=compress)
 
 There are 2 main levels:
 - Test: includes all steps that are behavior(s) and verifications. And the values will be call as `entities or DAO`.
