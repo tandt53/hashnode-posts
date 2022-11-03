@@ -1,5 +1,5 @@
 ---
-title: Automation test architecture
+title: Test Automation Architecture
 subtitle: Overview the architecture for automation test
 tags: general, automation-test, architecture
 domain: tandt53.com
