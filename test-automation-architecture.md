@@ -15,7 +15,7 @@ Layered architecture is well known pattern that is applied for many enterprise s
 - Persistence layer
 - Database layer
 
-![Layered architecture pattern](https://www.oreilly.com/api/v2/epubs/9781491971437/files/assets/sapr_0101.png)
+![Layered architecture pattern](https://cdn.hashnode.com/res/hashnode/image/upload/v1667495549657/_r48nZGtM.png?auto=compress)
 
 Image is cited from the book "Software architecture patterns" by Mark Richards. 
 
