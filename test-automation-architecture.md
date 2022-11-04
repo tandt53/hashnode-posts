@@ -6,10 +6,10 @@ domain: tandt53.com
 ignorePost: false
 ---
 
-As an automation test engineer, you might have confused what a good scenario is, how well our automation test are organized? or just asking yourself where should the line/method/module should be placed? This post will disclose a clear view for you about architecture of automation test.
+As an automation test engineer, you might have wondered what a good scenario is and how well our automation tests are organized. Or just asking yourself where should the line/method/module be placed? This post will provide you with a clear understanding of the architecture of automation test.
 
 ## Layered architecture 
-Layered architecture is well known pattern that is applied for many enterprise software solutions. The components in this architecture are layered horizontally, each one has own responsibility for application's features. Normally it has 3 or 4 layers:
+Layered architecture is a well-known pattern used in many enterprise software solutions. Components in this architecture are horizontally layered, with each component responsible for its own feature. Normally it has 3 or 4 layers:
 - Presentation layer
 - Business layer
 - Persistence layer
@@ -17,14 +17,14 @@ Layered architecture is well known pattern that is applied for many enterprise s
 
 ![Layered architecture pattern](https://cdn.hashnode.com/res/hashnode/image/upload/v1667495549657/_r48nZGtM.png?auto=compress)
 
-Image is cited from the book "Software architecture patterns" by Mark Richards. 
+This image was taken from Mark Richard's book "Software architecture patterns.".
 
-This post does not go deeply about this pattern, because there's tone of document on the internet you can find and read. Test automation is like a software solution/product, so it can definitely follow this kind of pattern to inherit all its advantages.
+This post does not go into detail about this pattern, because there are many documents on the internet you can find and read. Test automation is like a software solution/product, so it can definitely follow this kind of pattern to inherit all its advantages.
 
 ## Test automation layers 
-I will list down some basic layers in test automation, with code samples, and how to define which layer is line/method of code belong to. 
+I will list down some basic layers in test automation, with code samples, and how to define which layer the line/method of code belongs to
 
-Here is basic example for web automation using Selenium Webdriver:
+Here is a basic example of web automation using Selenium Webdriver:
 ```java
 public class LoginTest{
     @Test
@@ -41,22 +41,21 @@ public class LoginPage(){
     }
 }
 ```
-- **Test layer** simply are the set of all test classes, methods that arrange  scenarios and checkpoint verifications into test cases and suites. During test execution, this layer will call methods from business layer (`loginPage.login()`) and from core layer (`Assert.assertTrue()`). A test method is usually represented for `test scenario(s)` that includes use cases and expected result verification.
-- **Business layer** covers all the business feature of the application that and converts into programmable methods with parameters (if needed). These methods describe user steps in user scenario, not test scenario, so assert commands should never appeared in this level. Normally **page objects** is considered as in business layer.
-- **Core layer** contains all the supported methods from libraries or frameworks to execute test on application. Theses methods can come from:
+- **Test layer** simply is the set of all test classes, methods that arrange scenarios and checkpoint verifications into test cases and suites. During test execution, this layer will call methods from the business layer (`loginPage.login()`) and from the core layer (`Assert.assertTrue()`). In general, a test method represents a set of scenario steps that include use cases and expected results.
+- **Business layer** encapsulates all the business features of an application and converts them into programmable methods with parameters (if needed). These methods describe user steps in the user scenario, not the test scenario, so assert commands should never appear at this level. Normally **page objects** are considered part of the business layer.
+- **Core layer** contains all the methods available in libraries or frameworks to execute tests on an application. These methods can come from:
   - Test libraries/frameworks: `Assert.assertTrue()`, `Assert.assertEquals()`
-  - web automation: `sendKeys()`, `click()`, etc. from Selenium WebDriver
+  - Web automation: `sendKeys()`, `click()`, etc. from Selenium WebDriver
   - API automation: `given()`, `when()`, `then()` from Rest Assured.
-  - etc.
+  - Etc.
 
 ## Layers Principles
-Beside the layer's responsibilities, there is a rule to place a layer on the top, middle or bottom of the architecture. The key is **`dependency`**.
-To make the right position, you should answer some basic questions:
-- `Responsibility` - *what is it for?* for test or business or support.
-- `Dependencies` - *what are its dependencies?* test layer has 2 dependencies: business and core layers. But business layer depends on only core.
-- `Dependents` - *what are its dependents?* test layer does not have any dependent, business has 1 dependent (test layer), core layer has 2 dependents (business and test layers)
+As well as layer responsibilities, there is a rule for placing layers at the top, middle, or bottom of an architecture. The key is **dependency**. To choose the right position, you should answer some basic questions:
+- `Responsibility` - *what is it for?* For testing, business, automating or support.
+- `Dependencies` - *what are its dependencies?* Test layer has 2 dependencies: the business and core layers. But the business layer depends on the core.
+- `Dependents` - *what are its dependents?* Test layer does not have any dependents, business layer has 1 dependent (test layer), core layer has 2 dependents (business and test layers).
 
  
 ## Summary
-This post just presents 3 basic layers in the architecture for test automation. It is a good and fundamental guideline for you to structure test automation code. In fact, it is not easy to categorize everything in an automation project that is belong to one of 3 mentioned layers. However, just remember keyword **`DEPENDENCY`** and you can freely create new layer(s) as you want. 
+This post summarizes the 3 basic layers of the architecture for test automation. It can serve as a helpful and fundamental outline for structuring test automation code. It is not easy to categorize everything that falls under one of the 3 layers in an automation project. However, just remember the keyword **DEPENDENCY** and you can freely create new layer(s) as you want.
 
