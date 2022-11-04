@@ -6,16 +6,16 @@ domain: tandt53.com
 ignorePost: false
 ---
 
-Besides well-organized code in a scenario, it is necessary to manage values going through that scenario, especially in End-2-End scenario. Thus, this post will suggest an flow of those values inside an automation test case.
+Besides well-organized code in a scenario, it is necessary to manage values going through that scenario, especially in End-2-End scenario. Thus, this post will suggest a flow of those values inside an automation test case.
 ![State-Management](https://cdn.hashnode.com/res/hashnode/image/upload/v1665497896647/PUTI3h7X30.png?auto=compress)
 
 There are 2 main levels:
-- Test: includes all steps that are behavior(s) and verifications. And the values will be call as `entities or DAO`.
+- Test: includes all steps that are behavior(s) and verifications. And the values will be called as `entities or DAO`.
 - Page Object: as defined in [Martin Fowler's post](https://martinfowler.com/bliki/PageObject.html), it includes methods inside a page or fragment/layout of a page.
 
 ## State
-The term `state` is related to status of application during execution. It can be represented by individual values or combined properties to form object(s).
-In a test case, it is usually created, transferred, updated for business actions and checked for verification.
+The term `state` is related to the status of an application during execution. It can be represented by individual values or combined properties to form object(s).
+In a test case, it is usually created, transferred, updated for business actions, and checked for verification.
 
 ## Example 01
 Let's take a simple example:
@@ -43,8 +43,8 @@ public void happyCase(){
 As can be seen from above code, the variables `a`, `b` and `result` are considered as states.
 - `a` and `b` are created and initialized in Arrange stage.
 - Then these variables are passed to `sum()` method of `CalculationPage`
-- After method consumes variables, it will return the `result`.
-- The returned values is compared with the expected value, so `expected` variable is created and instantiated but it is not a state.
+- After method consumes variables, it will return `result`.
+- The returned value is compared with the expected value, so `expected` variable is created and instantiated but it is not a state.
 
 ## Example 02
 Let's create a more complicated example.
@@ -91,8 +91,7 @@ Now state contains properties of TransactionInfo object. As you can see:
 - Some properties of `txn` are defined first, in arrange stage. 
 - Then `txn` variable are passed to method `make()` to get back transaction id and set to the `id`.
 - Next is getting a new instance of transaction info in `txtResultPage.getTransaction()`.
-- Finally, compare state `txn` with `actualTxn`.  
-Because putting assert command in page object is not good practice, so we will get transaction from page object level to test level.
+- Finally, compare state `txn` with `actualTxn`. Because putting assert command in page object is not good practice, so we will get transaction from page object level to test level.
 
 ## Summary 
 
