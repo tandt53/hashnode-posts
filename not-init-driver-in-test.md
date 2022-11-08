@@ -110,3 +110,5 @@ class HomePage {
 ## Summary
 
 In this post, we discussed why we should not create driver instances at the test level. No matter what browser is running, it helps keep tests clean and limited to business features. Furthermore, the coupling between test and WebDriver is lost.
+
+The code presented in this post is a simple solution to remove test dependencies. In my next post, I will describe a more advanced technique that uses dependency injection.
