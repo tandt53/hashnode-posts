@@ -6,7 +6,7 @@ domain: tandt53.com
 ignorePost: false
 ---
 
-A lot of documents and posts have been published on the internet for web automation using Selenium Webdriver that are showing `WebDriver driver = new ChromeDriver()` in beforeTest annotated methods. This concept will remain with you months or years later, not just me. As a result of studying [test automation architecture](./test-automation-architecture.md), I have changed my mind. In this post, I will help you correct a wrong concept.
+A lot of documents and posts have been published on the internet for web automation using Selenium Webdriver that are showing `WebDriver driver = new ChromeDriver()` in beforeTest annotated methods. This concept will remain with you months or years later, not just me. As a result of studying [test automation architecture]([./test-automation-architecture.md](https://tandt53.com/test-automation-architecture)), I have changed my mind. In this post, I will help you correct a wrong concept.
 
 ```java
 public class LoginTest {
@@ -36,7 +36,7 @@ class HomePage {
 ```
 
 # Remind 
-Remind you to ask yourself 3 questions to define which layer should driver initialization be placed.
+Remind you to ask yourself 3 questions from [last post](https://tandt53.com/test-automation-architecture#heading-layers-principles) to define which layer should driver initialization be placed.
 - `Responsibility` - *what is it for?* For testing, business, automating or support.
 - `Dependencies` - *what are its dependencies?* Test layer has 2 dependencies: the business and core layers. But the business layer depends on the core.
 - `Dependents` - *what are its dependents?* Test layer does not have any dependents, business layer has 1 dependent (test layer), core layer has 2 dependents (business and test layers).
