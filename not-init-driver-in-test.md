@@ -6,7 +6,7 @@ domain: tandt53.com
 ignorePost: false
 ---
 
-A lot of documents and posts have been published on the internet for web automation using Selenium Webdriver that are showing `WebDriver driver = new ChromeDriver()` in beforeTest annotated methods. This concept will remain with you months or years later, not just me. As a result of studying [test automation architecture]([./test-automation-architecture.md](https://tandt53.com/test-automation-architecture)), I have changed my mind. In this post, I will help you correct a wrong concept.
+A lot of documents and posts have been published on the internet for web automation using Selenium Webdriver that are showing `WebDriver driver = new ChromeDriver()` in beforeTest annotated methods. This concept will remain with you months or years later, not just me. As a result of studying [test automation architecture](https://tandt53.com/test-automation-architecture), I have changed my mind. In this post, I will help you correct a wrong concept.
 
 ```java
 public class LoginTest {
