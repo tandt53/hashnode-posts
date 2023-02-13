@@ -1,6 +1,6 @@
 ---
 title: Is API testing black box or white box? 
-subtitle: It is not a good practice when placing assertions in Page Objects.
+subtitle: 
 tags: API, api-testing, white-box, black-box
 domain: tandt53.com
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1676258301265/aboTmcfOE.jpg?auto=compress
