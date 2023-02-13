@@ -36,3 +36,5 @@ With the above discussion, the question seems to try to match a testing type to 
 
 ## Summary
 In this post, I have presented my answers to the question in the title. The choice of black box or white box depends on which techniques will be used to ensure the API quality.
+
+Cover Photo by <a href="https://unsplash.com/@yogidan2012?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniele Levis Pelusi</a> on <a href="https://unsplash.com/photos/BXn8J4yjh3M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
