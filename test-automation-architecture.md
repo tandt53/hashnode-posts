@@ -3,6 +3,7 @@ title: Test Automation Architecture
 subtitle: Overview the architecture for automation test
 tags: general, automation-test, architecture
 domain: tandt53.com
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1676338632085/shyfwYXo7.jpg?auto=compress
 ignorePost: false
 ---
 
@@ -59,3 +60,5 @@ As well as layer responsibilities, there is a rule for placing layers at the top
 ## Summary
 This post summarizes the 3 basic layers of the architecture for test automation. It can serve as a helpful and fundamental outline for structuring test automation code. It is not easy to categorize everything that falls under one of the 3 layers in an automation project. However, just remember the keyword **DEPENDENCY** and you can freely create new layer(s) as you want.
 
+Photo by <a href="https://unsplash.com/@victor_g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Victor</a> on <a href="https://unsplash.com/photos/Ze9ykREkuVA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
